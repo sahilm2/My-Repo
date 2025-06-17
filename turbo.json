@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "type-check": {},
+    "dev:ui": {
+      "cache": false
+    },
+    "build:ui": {
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": [
+        "dev:ui"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": [
+        "build:ui"
+      ],
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
